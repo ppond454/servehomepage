@@ -9,7 +9,6 @@ const app = express()
 
 app.use(cors())
 
-let PORT = process.env.PORT || 4000
 
 
 // app.use(Project)
@@ -25,6 +24,6 @@ app.get("/" ,(req ,res)=>{
 })
 
 
-app.listen(PORT,()=>{
-    console.log(`${PORT}`);
-})
+app.listen(process.env.PORT || 4000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
