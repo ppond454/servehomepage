@@ -15,7 +15,7 @@ let PORT = process.env.PORT || 4000
 // app.use(Project)
 // app.use(Projectpage)
 
-app.get("/" ,(res,req)=>{
+app.get("/" ,(req ,res)=>{
 
     return res.status(200).json({
     hello : "ok"
